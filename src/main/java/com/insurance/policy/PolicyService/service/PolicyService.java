@@ -1,12 +1,12 @@
-package com.insurance.policy.service;
+package com.insurance.policy.PolicyService.service;
 
-import com.insurance.policy.enums.PolicyStatus;
-import com.insurance.policy.model.DTO.PolicyQuoteRequest;
-import com.insurance.policy.model.DTO.PolicyRequest;
-import com.insurance.policy.model.Policy;
-import com.insurance.policy.repository.PolicyRepository;
-import com.insurance.policy.utils.GenerateRandomNumber;
-import jakarta.persistence.EntityNotFoundException;
+import com.insurance.policy.PolicyService.enums.PolicyStatus;
+import com.insurance.policy.PolicyService.exceptions.InvalidPolicyStateException;
+import com.insurance.policy.PolicyService.exceptions.PolicyNotFoundException;
+import com.insurance.policy.PolicyService.model.DTO.PolicyQuoteRequest;
+import com.insurance.policy.PolicyService.model.Policy;
+import com.insurance.policy.PolicyService.repository.PolicyRepository;
+import com.insurance.policy.PolicyService.utils.GenerateRandomNumber;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,11 +40,11 @@ public class PolicyService {
 
     public Policy acceptPolicy(Integer polNo) {
         Policy policy = policyRepository.findById(polNo).orElseThrow(
-                () -> new EntityNotFoundException("Policy Not Found")
+                () -> new PolicyNotFoundException(polNo)
         );
 
         if (policy.getStatus() != PolicyStatus.QUOTED) {
-            throw new IllegalStateException("Policy : " + polNo + " cannot be accepted. Current status " + policy.getStatus());
+            throw new InvalidPolicyStateException(policy.getStatus());
         }
         policy.setStatus(PolicyStatus.ACTIVE);
         return policyRepository.save(policy);
@@ -53,14 +53,13 @@ public class PolicyService {
     public Policy rejectPolicy(Integer polNo) {
 
         Policy policy = policyRepository.findById(polNo).orElseThrow(
-                () -> new EntityNotFoundException("Policy Not Found")
+                () -> new PolicyNotFoundException(polNo)
         );
 
         if (policy.getStatus() != PolicyStatus.QUOTED) {
-            throw new IllegalStateException("Policy : " + polNo+ " cannot be rejected, Current status is " + policy.getStatus());
+            throw new InvalidPolicyStateException(policy.getStatus());
         }
         policy.setStatus(PolicyStatus.REJECTED);
-
         return policyRepository.save(policy);
     }
 }

@@ -1,6 +1,5 @@
-package com.insurance.policy.model.DTO;
+package com.insurance.policy.PolicyService.model.DTO;
 
-import com.insurance.policy.enums.PolicyStatus;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,7 +13,7 @@ public class PolicyQuoteRequest {
     private LocalDate coverStartDate;
     private LocalDate coverEndDate;
     private String productType;
-    private int riskId;
+//    private int riskId;
     private String riskType;
     private String riskAddress;
     private String businessDescription;

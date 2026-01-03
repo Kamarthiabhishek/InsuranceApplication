@@ -1,4 +1,4 @@
-package com.insurance.policy.model;
+package com.insurance.policy.PolicyService.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

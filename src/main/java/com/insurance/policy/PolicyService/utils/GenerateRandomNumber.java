@@ -1,4 +1,4 @@
-package com.insurance.policy.utils;
+package com.insurance.policy.PolicyService.utils;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

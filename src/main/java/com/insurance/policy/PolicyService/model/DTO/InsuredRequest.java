@@ -1,4 +1,4 @@
-package com.insurance.policy.model.DTO;
+package com.insurance.policy.PolicyService.model.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

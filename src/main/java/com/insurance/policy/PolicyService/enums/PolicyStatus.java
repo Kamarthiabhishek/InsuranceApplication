@@ -1,4 +1,4 @@
-package com.insurance.policy.enums;
+package com.insurance.policy.PolicyService.enums;
 
 public enum PolicyStatus {
     QUOTED,

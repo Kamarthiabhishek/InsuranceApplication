@@ -1,12 +1,11 @@
-package com.insurance.policy.controller;
+package com.insurance.policy.PolicyService.controller;
 
-import com.insurance.policy.model.DTO.InsuredRequest;
-import com.insurance.policy.model.Insured;
-import com.insurance.policy.service.InsuredService;
+import com.insurance.policy.PolicyService.model.DTO.InsuredRequest;
+import com.insurance.policy.PolicyService.model.Insured;
+import com.insurance.policy.PolicyService.service.InsuredService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

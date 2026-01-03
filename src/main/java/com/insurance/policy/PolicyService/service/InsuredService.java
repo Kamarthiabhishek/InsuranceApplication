@@ -1,9 +1,9 @@
-package com.insurance.policy.service;
+package com.insurance.policy.PolicyService.service;
 
-import com.insurance.policy.model.DTO.InsuredRequest;
-import com.insurance.policy.model.Insured;
-import com.insurance.policy.repository.InsuredRepository;
-import com.insurance.policy.utils.GenerateRandomNumber;
+import com.insurance.policy.PolicyService.model.DTO.InsuredRequest;
+import com.insurance.policy.PolicyService.model.Insured;
+import com.insurance.policy.PolicyService.repository.InsuredRepository;
+import com.insurance.policy.PolicyService.utils.GenerateRandomNumber;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
