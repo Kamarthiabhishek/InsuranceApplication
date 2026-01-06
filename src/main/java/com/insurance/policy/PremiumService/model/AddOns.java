@@ -1,0 +1,32 @@
+package com.insurance.policy.PremiumService.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AddOns {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private String productCode;
+    private String productVersion;
+
+    private String addonCode;
+    private String pricingType;
+    private Double pricingValue;
+
+    private LocalDate effectiveFrom;
+    private LocalDate effectiveTo;
+}
