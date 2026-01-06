@@ -1,8 +1,10 @@
 package com.insurance.policy.PremiumService.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class PremiumResponse {
     private Double basePremium;
     private Double loadingPremium;

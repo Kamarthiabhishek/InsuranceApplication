@@ -19,7 +19,7 @@ public interface CityRiskRepository extends JpaRepository<CityRisk, Integer> {
           AND c.cityCategory = :cityCategory
           AND :today BETWEEN c.effectiveFrom AND c.effectiveTo
     """)
-    Optional<Double> findFactor(
+    double findFactor(
             String productCode,
             String productVersion,
             String cityCategory,

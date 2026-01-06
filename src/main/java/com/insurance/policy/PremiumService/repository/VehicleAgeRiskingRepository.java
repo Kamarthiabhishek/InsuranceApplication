@@ -19,7 +19,7 @@ public interface VehicleAgeRiskingRepository extends JpaRepository<VehicleAgeRis
           AND :vehicleAge BETWEEN v.ageFrom AND v.ageTo
           AND :today BETWEEN v.effectiveFrom AND v.effectiveTo
     """)
-    Optional<Double> findFactor(
+    double findFactor(
             String productCode,
             String productVersion,
             Integer vehicleAge,

@@ -19,7 +19,7 @@ public interface NoClaimDiscountRepository extends JpaRepository<NoClaimsDiscoun
           AND :years BETWEEN n.yearsFrom AND n.yearsTo
           AND :today BETWEEN n.effectiveFrom AND n.effectiveTo
     """)
-    Optional<Double> findFactor(
+    double findFactor(
             String productCode,
             String productVersion,
             Integer years,

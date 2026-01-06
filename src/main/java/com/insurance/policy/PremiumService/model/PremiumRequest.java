@@ -24,9 +24,7 @@ public class PremiumRequest {
 
     private Integer noClaimsYear;
 
-    private Boolean zeroDep;
-    private Boolean rsa;
-
-
+    private boolean zeroDep;
+    private boolean rsa;
 
 }
