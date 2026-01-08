@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface VehicleAgeRiskingRepository extends JpaRepository<VehicleAgeRisking, Integer> {
 
     @Query("""
-        SELECT v.factor FROM VehicleAgeRisk v
+        SELECT v.factor FROM VehicleAgeRisking v
         WHERE v.productCode = :productCode
           AND v.productVersion = :productVersion
           AND :vehicleAge BETWEEN v.ageFrom AND v.ageTo

@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface NoClaimDiscountRepository extends JpaRepository<NoClaimsDiscount, Integer> {
 
     @Query("""
-        SELECT n.factor FROM NcbDiscount n
+        SELECT n.factor FROM NoClaimsDiscount n
         WHERE n.productCode = :productCode
           AND n.productVersion = :productVersion
           AND :years BETWEEN n.yearsFrom AND n.yearsTo

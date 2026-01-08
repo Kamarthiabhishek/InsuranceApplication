@@ -1,0 +1,9 @@
+INSERT INTO VEHICLE_AGE_RISKING
+(product_code, product_version,
+ age_from, age_to, factor,
+ effective_from, effective_to)
+VALUES
+('MOTOR_PC','V1',0,1,0.95, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 5 YEAR)),
+('MOTOR_PC','V1',2,4,1.00, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 5 YEAR)),
+('MOTOR_PC','V1',5,7,1.10, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 5 YEAR)),
+('MOTOR_PC','V1',8,15,1.25, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 5 YEAR));

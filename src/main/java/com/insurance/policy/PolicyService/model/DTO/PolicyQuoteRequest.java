@@ -13,7 +13,7 @@ public class PolicyQuoteRequest {
     private LocalDate coverStartDate;
     private LocalDate coverEndDate;
     private String productType;
-//    private int riskId;
+    private int riskId;
     private String riskType;
     private String riskAddress;
     private String businessDescription;

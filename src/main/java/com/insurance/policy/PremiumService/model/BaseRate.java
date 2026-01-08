@@ -22,12 +22,13 @@ public class BaseRate {
     private Integer riskId;
 
     private String productCode;
+    private String productVersion;
     private String vehicleType;
     private String fuelType;
-    private Integer engineCCFrom;
-    private Integer engineCCTo;
-    private String cityZone;
-    private Integer ratePercentage;
+    private Integer engineCcFrom;
+    private Integer engineCcTo;
+    private String zone;
+    private Double ratePercentage;
     private LocalDate effectiveFrom;
-    private LocalDate effectiveTill;
+    private LocalDate effectiveTo;
 }

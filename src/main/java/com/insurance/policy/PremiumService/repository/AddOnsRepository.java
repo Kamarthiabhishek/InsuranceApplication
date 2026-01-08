@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface AddOnsRepository extends JpaRepository<AddOns, Integer> {
 
     @Query("""
-        SELECT a FROM AddonRate a
+        SELECT a FROM AddOns a
         WHERE a.productCode = :productCode
           AND a.productVersion = :productVersion
           AND a.addonCode = :addonCode
