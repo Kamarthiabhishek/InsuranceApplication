@@ -1,7 +1,6 @@
 package com.insurance.policy.PremiumService.controller;
 
 import com.insurance.policy.PremiumService.model.PremiumRequest;
-import com.insurance.policy.PremiumService.model.PremiumResponse;
 import com.insurance.policy.PremiumService.service.PremiumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +16,7 @@ public class PremiumController {
     private PremiumService premiumService;
 
     @PostMapping("/calculate")
-    public PremiumResponse calculatePremium(@RequestBody PremiumRequest request){
+    public Double calculatePremium(@RequestBody PremiumRequest request){
         return premiumService.calculatePremium(request);
     }
 }

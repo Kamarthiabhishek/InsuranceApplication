@@ -1,15 +1,17 @@
-package com.insurance.policy.PremiumService.model;
+package com.insurance.policy.PolicyService.model.DTO;
 
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PremiumRequest {
+public class QuoteRequest {
+
+    private Integer quoteId;
 
     private String productCode;
     private String productVersion;
@@ -23,10 +25,17 @@ public class PremiumRequest {
     private String cityCategory;
 
     private Integer noClaimsYear;
-
     private String pricingType;
 
     private boolean zeroDep;
     private boolean rsa;
+
+    // Premium details
+    private Double netPremium;
+
+    private String status;
+
+    private LocalDate coverStartDate;
+    private LocalDate coverEndDate;
 
 }
